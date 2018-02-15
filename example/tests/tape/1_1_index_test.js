@@ -1,6 +1,5 @@
 var wd = require('wd');
-var argv = require('minimist')(process.argv.slice(2));
-var caps = require('./'+argv.platform+'.json');
+var caps = require('./' + process.env.PLATFORM + '.json');
 
 var test = require('tape');
 test('contexts test', function (t) {
